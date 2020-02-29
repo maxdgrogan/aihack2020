@@ -16,9 +16,9 @@ def get_data(test_portion = 0.2):
 
     scaler = MinMaxScaler(feature_range=(-1, 1))
     train_data_normalized = scaler.fit_transform(train_data .reshape(-1, 1))
-    test_data_normalized = scaler.fit_transform(test_data .reshape(-1, 1))
+    test_data = scaler.transform(test_data.reshape(-1, 1))
 
     train_data_normalized = torch.FloatTensor(train_data_normalized).view(-1)
-    test_data_normalized = torch.FloatTensor(test_data_normalized).view(-1)
+    test_data = torch.FloatTensor(test_data).view(-1)
 
-    return train_data_normalized, test_data_normalized
+    return train_data_normalized, test_data

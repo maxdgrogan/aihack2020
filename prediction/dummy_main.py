@@ -22,13 +22,12 @@ parser = argparse.ArgumentParser("drugs")
 parser.add_argument('--data', type=str, default='../data', help='location of the data corpus')
 parser.add_argument('--input_size', nargs='+', type=list, default=[1], help='input size')
 parser.add_argument('--hidden_size', type=int, default=100, help='number of hidden states')
-parser.add_argument('--num_of_layers', type=int, default=11, help='number of hidden layers')
+parser.add_argument('--num_of_layers', type=int, default=1, help='number of hidden layers')
 parser.add_argument('--output_size', nargs='+', type=list, default=[1], help='output size')
 parser.add_argument('--test_portion',type = float, default = 0.2, help = 'what should be used for test')
 parser.add_argument('--train_window',type = int, default = 12, help = 'training window, how many months should be concatenated in the input')
 parser.add_argument('--batch_size', type=int, default=8, help='batch size')
-parser.add_argument('--learning_rate', type=float, default=0.025, help='init learning rate')
-parser.add_argument('--momentum', type=float, default=0.9, help='momentum')
+parser.add_argument('--learning_rate', type=float, default=0.001, help='init learning rate')
 parser.add_argument('--weight_decay', type=float, default=3e-4, help='weight decay')
 parser.add_argument('--gpu', type=int, default=-1, help='gpu device id')
 parser.add_argument('--epochs', type=int, default=150, help='num of training epochs')
@@ -39,7 +38,7 @@ parser.add_argument('--save', type=str, default='EXP', help='experiment name')
 parser.add_argument('--debug', type=bool, default=False, help='whether we are in a debug mode')
 parser.add_argument('--seed', type=int, default=2, help='random seed')
 parser.add_argument('--samples', type=int, default=20, help='how many samples to take')
-parser.add_argument('--dropout', type=float, default=0.2, help='how many samples to take')
+parser.add_argument('--dropout', type=float, default=0.0, help='how many samples to take')
 
 args = parser.parse_args()
 name = "drugs-{}-{}".format(args.save, time.strftime("%Y%m%d-%H%M%S"))
@@ -81,10 +80,9 @@ def get_model():
   model =Network(args.train_window, args.input_size, args.hidden_size, args.num_of_layers, args.batch_size, args.output_size, args.dropout)
   logging.info(model.__repr__())
 
-  optimizer = torch.optim.SGD(
+  optimizer = torch.optim.Adam(
       model.parameters(),
       lr=args.learning_rate,
-      momentum=args.momentum,
       weight_decay=args.weight_decay)
 
   scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer,
