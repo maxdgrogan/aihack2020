@@ -19,11 +19,15 @@ To run our project proceed to [Running](#Running) and the contributions are all 
 
 ## Dataset
 
+The initial datased consisted of a meta-data file mapping medical procedure codes to descriptions accompanied with a unique CSV for each medical process that contained over ~5 years worth of prescription counts for every GP in the UK that would prescribe that procedure at least once. Our contribution is deemed in processing the dataset and extrapolating non-existent values into a time-series dataset consisting of prescription data from more than ~6000 GPs in the UK for the thirty most-commonly prescribed medical processes over a ~5 year period.   
+
 ## Method
 
-Our method is a multi-layered **Recurrent neural network** that is trained through backpropagation. We are able to estimate the uncertainty of our predictions through Bayesian inference that is provided through using [MC Dropout](https://arxiv.org/pdf/1512.05287.pdf).
+Our method is a multi-layered **Recurrent neural network** that is trained through backpropagation. We are able to estimate the uncertainty of our predictions on the procedure counts through Bayesian inference that is provided through using [MC Dropout](https://arxiv.org/pdf/1512.05287.pdf).
 
 ## Visualisation
+
+
 
 ### Running
 
