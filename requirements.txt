@@ -1,0 +1,5 @@
+pytorch==1.4.0
+numpy
+sklearn
+seaborn
+autopep8
