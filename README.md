@@ -8,7 +8,6 @@ As life expectancy increases, it is crucial to improve the quality of life among
 
 Our project is aimed at measuring correlations between different diseases in regions in the UK. We buolt a dataset consisting of time-series data consisting of the number of prescriptions per GP in the UK and we attempt to predict thwat is going to be the monthly consumption for specific medicine per GP.
 
-Ou
 
 The main contributions of this projects are:
 
