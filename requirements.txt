@@ -1,0 +1,6 @@
+torch==1.4.0
+numpy
+sklearn
+seaborn
+autopep8
+matplotlib
