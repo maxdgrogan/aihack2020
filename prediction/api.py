@@ -47,6 +47,9 @@ args.model_path = "./model/" + name + "/" + name + ".model"
 
 NAME = ""
 
+if torch.cuda.is_available():
+  args.gpu = 0
+
 def get_model():
   if NAME != "":
     model = Network(args.train_window, args.input_size, args.hidden_size, args.num_of_layers, args.batch_size, args.output_size, args.dropout)
@@ -78,6 +81,9 @@ def get_model():
     criterion = criterion.cuda()
 
   model =Network(args.train_window, args.input_size, args.hidden_size, args.num_of_layers, args.batch_size, args.output_size, args.dropout)
+  if torch.cuda.is_available():
+    model = model.cuda()
+
   logging.info(model.__repr__())
 
   optimizer = torch.optim.Adam(
