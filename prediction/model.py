@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 
+
 class Network(nn.Module):
     def __init__(self, window, input_size=1, hidden_layer_size=100, 
                  num_of_layers=1, batch_size=8, output_size=1, dropout=0.2):

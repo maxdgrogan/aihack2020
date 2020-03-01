@@ -4,3 +4,7 @@ sklearn
 seaborn
 autopep8
 matplotlib
+pandas
+ipykernel
+tqdm
+jupyter

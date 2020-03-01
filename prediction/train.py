@@ -1,7 +1,15 @@
 import torch
 from torch.autograd import Variable
-from utils import AverageMeter, save
+from prediction.utils import AverageMeter, save
 import time
+import torch.nn as nn
+import torch.nn.functional as F
+
+class L2Loss(nn.Module):
+    def __init__(self):
+        super().__init__()
+    def forward(self, y_pred, y):
+        return 0.5 * torch.sum((y_pred-y).pow(2))
 
 
 class Trainer:
@@ -15,7 +23,7 @@ class Trainer:
         self.logger = logger
         self.args = args
 
-        self.criterion = criterion
+        self.criterion = L2Loss()
         self.model = model
 
         self.optimiser = optimiser
@@ -53,11 +61,10 @@ class Trainer:
             if self.args.gpu != -1:
                 X, y = X.cuda(), y.cuda()
             N = X.shape[0]
-            X = X.unsqueeze(dim=2)
-
 
             optimiser.zero_grad()
             y_pred = self.model(X)
+ 
             loss = self.criterion(y_pred, y)
             std = 0.
             loss.backward()
@@ -82,7 +89,6 @@ class Trainer:
             for step, (X, y) in enumerate(loader):
                 if self.args.gpu != -1:
                     X, y = X.cuda(), y.cuda()
-                X = X.unsqueeze(dim=2)
                 N = X.shape[0]
                 y_pred = []
                 for i in range(self.args.samples):

@@ -136,3 +136,4 @@ dmypy.json
 
 data/raw/NHS_challenge_data/*
 data/raw/stat-stop-smok-serv-eng-q4-1819-csv-v2/*
+data/processed/processed_cleaned_df.csv
