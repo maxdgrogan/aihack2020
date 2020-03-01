@@ -15,7 +15,7 @@ The main contributions of this projects are:
 2. [Method](#Method)
 3. [Visualisation](#Visualisation) 
 
-To run our project proceed to [Running](#Running) and the contributions are all summarised in `tutorial.ipynb` inside the root of the project. 
+To run our project proceed to [Running](#Running) and the contributions are all summarised in `train.ipynb` inside the root of the project. 
 
 ## Dataset
 
