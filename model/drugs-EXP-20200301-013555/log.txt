@@ -1,0 +1,23 @@
+03/01 01:36:36 AM | # START #
+03/01 01:36:36 AM | Args = Namespace(batch_size=64, data='./data/processed/processed_cleaned_df.csv', debug=False, dropout=0.3, epochs=100, f='/Users/martinferianc/Library/Jupyter/runtime/kernel-6d3ed8b8-10e2-490a-8f13-9cec97ac2ff8.json', gpu=-1, hidden_size=300, input_size=[33], layers=8, learning_rate=0.001, log_freq=30, model_path='./model/drugs-EXP-20200301-013555/drugs-EXP-20200301-013555.model', num_of_layers=1, number_of_layers=10, output_size=[1], samples=20, save='./model/drugs-EXP-20200301-013555', seed=1, test_portion=0.2, train_window=12, weight_decay=0.0001)
+03/01 01:36:36 AM | ## Creating model and criterion ##
+03/01 01:36:36 AM | ## Getting and possibly pre-processing data ##
+03/01 01:36:36 AM | ## Beginning training ##
+03/01 01:36:36 AM | ### Start to train weights for 100 epochs #### 
+03/01 01:36:36 AM | #### Training weights for epoch 0 #### 
+03/01 01:36:38 AM | #### Train: [  1/100] Step 030/3950 MSE 0.0508+-0.00000
+03/01 01:36:39 AM | #### Train: [  1/100] Step 060/3950 MSE 0.0263+-0.00000
+03/01 01:36:40 AM | #### Train: [  1/100] Step 090/3950 MSE 0.0177+-0.00000
+03/01 01:36:42 AM | #### Train: [  1/100] Step 120/3950 MSE 0.0134+-0.00000
+03/01 01:36:43 AM | #### Train: [  1/100] Step 150/3950 MSE 0.0108+-0.00000
+03/01 01:36:44 AM | #### Train: [  1/100] Step 180/3950 MSE 0.0091+-0.00000
+03/01 01:36:46 AM | #### Train: [  1/100] Step 210/3950 MSE 0.0078+-0.00000
+03/01 01:36:47 AM | #### Train: [  1/100] Step 240/3950 MSE 0.0069+-0.00000
+03/01 01:36:49 AM | #### Train: [  1/100] Step 270/3950 MSE 0.0061+-0.00000
+03/01 01:36:50 AM | #### Train: [  1/100] Step 300/3950 MSE 0.0056+-0.00000
+03/01 01:36:51 AM | #### Train: [  1/100] Step 330/3950 MSE 0.0051+-0.00000
+03/01 01:36:53 AM | #### Train: [  1/100] Step 360/3950 MSE 0.0047+-0.00000
+03/01 01:36:54 AM | #### Train: [  1/100] Step 390/3950 MSE 0.0043+-0.00000
+03/01 01:36:56 AM | #### Train: [  1/100] Step 420/3950 MSE 0.0040+-0.00000
+03/01 01:36:57 AM | #### Train: [  1/100] Step 450/3950 MSE 0.0038+-0.00000
+03/01 01:36:59 AM | #### Train: [  1/100] Step 480/3950 MSE 0.0036+-0.00000

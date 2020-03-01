@@ -56,6 +56,7 @@ class Trainer:
 
             optimiser.zero_grad()
             y_pred = self.model(X)
+ 
             loss = self.criterion(y_pred, y)
             std = 0.
             loss.backward()
