@@ -86,7 +86,7 @@ def save(model, model_path):
 
 
 def load(model, model_path):
-    model.load_state_dict(torch.load(model_path))
+    model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
 
 
 def add_text_to_file(text, file_path):

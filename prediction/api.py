@@ -13,6 +13,7 @@ import argparse
 import os
 import sys
 import glob
+import pickle
 sys.path.append("../")
 
 import torch.nn as nn
@@ -46,7 +47,7 @@ name = "drugs-{}-{}".format(args.save, time.strftime("%Y%m%d-%H%M%S"))
 args.save = './model/' + name
 args.model_path = "./model/" + name + "/" + name + ".model"
 
-NAME = ""
+NAME = "./model/drugs-EXP-20200229-210502/drugs-EXP-20200229-210502.model"
 
 if torch.cuda.is_available():
   args.gpu = 0
@@ -54,7 +55,8 @@ if torch.cuda.is_available():
 def get_model(train_loader=None, test_loader=None):
   if NAME != "":
     model = Network(args.train_window, args.input_size, args.hidden_size, args.num_of_layers, args.batch_size, args.output_size, args.dropout)
-    return load(model, NAME)
+    scaler = pickle.load(open('model/scaler.pkl', 'rb'))
+    return load(model, NAME), scaler
 
   create_directories_from_list([args.save])
 
@@ -109,6 +111,7 @@ def get_model(train_loader=None, test_loader=None):
   trainer.train_loop(train_loader, test_loader)
 
   return model
+
 
 
 if __name__ == '__main__':
