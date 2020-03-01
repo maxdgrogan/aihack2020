@@ -47,7 +47,7 @@ name = "drugs-{}-{}".format(args.save, time.strftime("%Y%m%d-%H%M%S"))
 args.save = './model/' + name
 args.model_path = "./model/" + name + "/" + name + ".model"
 
-NAME = ""
+NAME = "model/drugs-EXP-20200229-235351/drugs-EXP-20200229-235351.model"
 
 if torch.cuda.is_available():
   args.gpu = 0
@@ -56,7 +56,7 @@ def get_model(train_loader=None, test_loader=None):
   if NAME != "":
     model = Network(args.train_window, args.input_size, args.hidden_size, args.num_of_layers, args.batch_size, args.output_size, args.dropout)
     load(model, NAME)
-    scaler = pickle.load(open('model/scaler.pkl', 'rb'))
+    scaler = pickle.load(open('model/scaler.pck', 'rb'))
     return model, scaler
 
   create_directories_from_list([args.save])
