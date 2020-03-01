@@ -55,8 +55,9 @@ if torch.cuda.is_available():
 def get_model(train_loader=None, test_loader=None):
   if NAME != "":
     model = Network(args.train_window, args.input_size, args.hidden_size, args.num_of_layers, args.batch_size, args.output_size, args.dropout)
+    load(model, NAME)
     scaler = pickle.load(open('model/scaler.pkl', 'rb'))
-    return load(model, NAME), scaler
+    return model, scaler
 
   create_directories_from_list([args.save])
 
