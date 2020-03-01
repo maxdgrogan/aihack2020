@@ -47,7 +47,7 @@ name = "drugs-{}-{}".format(args.save, time.strftime("%Y%m%d-%H%M%S"))
 args.save = './model/' + name
 args.model_path = "./model/" + name + "/" + name + ".model"
 
-NAME = "model/drugs-EXP-20200229-235351/drugs-EXP-20200229-235351.model"
+NAME = "model/drugs-EXP-20200301-000533/drugs-EXP-20200301-000533.model"
 
 if torch.cuda.is_available():
   args.gpu = 0
