@@ -2,6 +2,14 @@ import torch
 from torch.autograd import Variable
 from prediction.utils import AverageMeter, save
 import time
+import torch.nn as nn
+import torch.nn.functional as F
+
+class L2Loss(nn.Module):
+    def __init__(self):
+        super().__init__()
+    def forward(self, y_pred, y):
+        return 0.5 * torch.sum((y_pred-y).pow(2))
 
 
 class Trainer:
@@ -15,7 +23,7 @@ class Trainer:
         self.logger = logger
         self.args = args
 
-        self.criterion = criterion
+        self.criterion = L2Loss()
         self.model = model
 
         self.optimiser = optimiser
