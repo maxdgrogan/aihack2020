@@ -1,13 +1,13 @@
 
-from dummy_data import get_data
-from data_wrapper import get_loaders
-from model import Network
-from train import Trainer
+from prediction.dummy_data import get_data
+from prediction.data_wrapper import get_loaders
+from prediction.model import Network
+from prediction.train import Trainer
 
 import time
 import numpy as np
 import torch
-from utils import create_directories_from_list, get_logger, load
+from prediction.utils import create_directories_from_list, get_logger, load
 import logging
 import argparse
 import os
@@ -19,7 +19,8 @@ import torch.nn as nn
 import torch.backends.cudnn as cudnn
 
 parser = argparse.ArgumentParser("drugs")
-parser.add_argument('--data', type=str, default='../data', help='location of the data corpus')
+parser.add_argument('-f', type=str, default='./data/processed/processed_clean_df.csv', help='location of the data corpus')
+parser.add_argument('--data', type=str, default='./data/processed/processed_clean_df.csv', help='location of the data corpus')
 parser.add_argument('--input_size', nargs='+', type=list, default=[1], help='input size')
 parser.add_argument('--hidden_size', type=int, default=100, help='number of hidden states')
 parser.add_argument('--num_of_layers', type=int, default=1, help='number of hidden layers')
@@ -50,7 +51,7 @@ NAME = ""
 if torch.cuda.is_available():
   args.gpu = 0
 
-def get_model():
+def get_model(train_loader=None, test_loader=None):
   if NAME != "":
     model = Network(args.train_window, args.input_size, args.hidden_size, args.num_of_layers, args.batch_size, args.output_size, args.dropout)
     return load(model, NAME)
@@ -96,8 +97,9 @@ def get_model():
                                                          last_epoch=-1)
 
   logger.info("## Getting and possibly pre-processing data ##")
-  train_data, test_data = get_data(args.test_portion)
-  train_loader, test_loader = get_loaders(train_data, test_data, args)
+  if train_loader is None or test_loader is None:
+    train_data, test_data = get_data(args.test_portion)
+    train_loader, test_loader = get_loaders(train_data, test_data, args)
 
 
   logger.info("## Beginning training ##")

@@ -1,0 +1,42 @@
+03/01 12:34:29 AM | # START #
+03/01 12:34:29 AM | Args = Namespace(batch_size=64, data='./data/processed/processed_cleaned_df.csv', debug=False, dropout=0.3, epochs=100, f='/Users/martinferianc/Library/Jupyter/runtime/kernel-6d3ed8b8-10e2-490a-8f13-9cec97ac2ff8.json', gpu=0, hidden_size=300, input_size=[33], layers=8, learning_rate=0.001, log_freq=30, model_path='./model/drugs-EXP-20200301-003140/drugs-EXP-20200301-003140.model', num_of_layers=1, number_of_layers=10, output_size=[1], samples=20, save='./model/drugs-EXP-20200301-003140', seed=1, test_portion=0.2, train_window=12, weight_decay=0.0001)
+03/01 12:34:29 AM | ## Creating model and criterion ##
+03/01 12:34:29 AM | ## Getting and possibly pre-processing data ##
+03/01 12:34:29 AM | ## Beginning training ##
+03/01 12:34:29 AM | ### Start to train weights for 100 epochs #### 
+03/01 12:34:29 AM | #### Training weights for epoch 0 #### 
+03/01 12:36:23 AM | # START #
+03/01 12:36:23 AM | # START #
+03/01 12:36:23 AM | Args = Namespace(batch_size=64, data='./data/processed/processed_cleaned_df.csv', debug=False, dropout=0.3, epochs=100, f='/Users/martinferianc/Library/Jupyter/runtime/kernel-6d3ed8b8-10e2-490a-8f13-9cec97ac2ff8.json', gpu=-1, hidden_size=300, input_size=[33], layers=8, learning_rate=0.001, log_freq=30, model_path='./model/drugs-EXP-20200301-003140/drugs-EXP-20200301-003140.model', num_of_layers=1, number_of_layers=10, output_size=[1], samples=20, save='./model/drugs-EXP-20200301-003140', seed=1, test_portion=0.2, train_window=12, weight_decay=0.0001)
+03/01 12:36:23 AM | Args = Namespace(batch_size=64, data='./data/processed/processed_cleaned_df.csv', debug=False, dropout=0.3, epochs=100, f='/Users/martinferianc/Library/Jupyter/runtime/kernel-6d3ed8b8-10e2-490a-8f13-9cec97ac2ff8.json', gpu=-1, hidden_size=300, input_size=[33], layers=8, learning_rate=0.001, log_freq=30, model_path='./model/drugs-EXP-20200301-003140/drugs-EXP-20200301-003140.model', num_of_layers=1, number_of_layers=10, output_size=[1], samples=20, save='./model/drugs-EXP-20200301-003140', seed=1, test_portion=0.2, train_window=12, weight_decay=0.0001)
+03/01 12:36:23 AM | ## Creating model and criterion ##
+03/01 12:36:23 AM | ## Creating model and criterion ##
+03/01 12:36:23 AM | ## Getting and possibly pre-processing data ##
+03/01 12:36:23 AM | ## Getting and possibly pre-processing data ##
+03/01 12:36:23 AM | ## Beginning training ##
+03/01 12:36:23 AM | ## Beginning training ##
+03/01 12:36:23 AM | ### Start to train weights for 100 epochs #### 
+03/01 12:36:23 AM | ### Start to train weights for 100 epochs #### 
+03/01 12:36:23 AM | #### Training weights for epoch 0 #### 
+03/01 12:36:23 AM | #### Training weights for epoch 0 #### 
+03/01 12:37:16 AM | # START #
+03/01 12:37:16 AM | # START #
+03/01 12:37:16 AM | # START #
+03/01 12:37:16 AM | Args = Namespace(batch_size=64, data='./data/processed/processed_cleaned_df.csv', debug=False, dropout=0.3, epochs=100, f='/Users/martinferianc/Library/Jupyter/runtime/kernel-6d3ed8b8-10e2-490a-8f13-9cec97ac2ff8.json', gpu=-1, hidden_size=300, input_size=[33], layers=8, learning_rate=0.001, log_freq=30, model_path='./model/drugs-EXP-20200301-003140/drugs-EXP-20200301-003140.model', num_of_layers=1, number_of_layers=10, output_size=[1], samples=20, save='./model/drugs-EXP-20200301-003140', seed=1, test_portion=0.2, train_window=12, weight_decay=0.0001)
+03/01 12:37:16 AM | Args = Namespace(batch_size=64, data='./data/processed/processed_cleaned_df.csv', debug=False, dropout=0.3, epochs=100, f='/Users/martinferianc/Library/Jupyter/runtime/kernel-6d3ed8b8-10e2-490a-8f13-9cec97ac2ff8.json', gpu=-1, hidden_size=300, input_size=[33], layers=8, learning_rate=0.001, log_freq=30, model_path='./model/drugs-EXP-20200301-003140/drugs-EXP-20200301-003140.model', num_of_layers=1, number_of_layers=10, output_size=[1], samples=20, save='./model/drugs-EXP-20200301-003140', seed=1, test_portion=0.2, train_window=12, weight_decay=0.0001)
+03/01 12:37:16 AM | Args = Namespace(batch_size=64, data='./data/processed/processed_cleaned_df.csv', debug=False, dropout=0.3, epochs=100, f='/Users/martinferianc/Library/Jupyter/runtime/kernel-6d3ed8b8-10e2-490a-8f13-9cec97ac2ff8.json', gpu=-1, hidden_size=300, input_size=[33], layers=8, learning_rate=0.001, log_freq=30, model_path='./model/drugs-EXP-20200301-003140/drugs-EXP-20200301-003140.model', num_of_layers=1, number_of_layers=10, output_size=[1], samples=20, save='./model/drugs-EXP-20200301-003140', seed=1, test_portion=0.2, train_window=12, weight_decay=0.0001)
+03/01 12:37:16 AM | ## Creating model and criterion ##
+03/01 12:37:16 AM | ## Creating model and criterion ##
+03/01 12:37:16 AM | ## Creating model and criterion ##
+03/01 12:37:16 AM | ## Getting and possibly pre-processing data ##
+03/01 12:37:16 AM | ## Getting and possibly pre-processing data ##
+03/01 12:37:16 AM | ## Getting and possibly pre-processing data ##
+03/01 12:37:16 AM | ## Beginning training ##
+03/01 12:37:16 AM | ## Beginning training ##
+03/01 12:37:16 AM | ## Beginning training ##
+03/01 12:37:16 AM | ### Start to train weights for 100 epochs #### 
+03/01 12:37:16 AM | ### Start to train weights for 100 epochs #### 
+03/01 12:37:16 AM | ### Start to train weights for 100 epochs #### 
+03/01 12:37:16 AM | #### Training weights for epoch 0 #### 
+03/01 12:37:16 AM | #### Training weights for epoch 0 #### 
+03/01 12:37:16 AM | #### Training weights for epoch 0 #### 

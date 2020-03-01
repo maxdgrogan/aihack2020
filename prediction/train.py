@@ -1,6 +1,6 @@
 import torch
 from torch.autograd import Variable
-from utils import AverageMeter, save
+from prediction.utils import AverageMeter, save
 import time
 
 
@@ -53,8 +53,6 @@ class Trainer:
             if self.args.gpu != -1:
                 X, y = X.cuda(), y.cuda()
             N = X.shape[0]
-            X = X.unsqueeze(dim=2)
-
 
             optimiser.zero_grad()
             y_pred = self.model(X)
@@ -82,7 +80,6 @@ class Trainer:
             for step, (X, y) in enumerate(loader):
                 if self.args.gpu != -1:
                     X, y = X.cuda(), y.cuda()
-                X = X.unsqueeze(dim=2)
                 N = X.shape[0]
                 y_pred = []
                 for i in range(self.args.samples):
