@@ -30,14 +30,14 @@ class Network(nn.Module):
 
         self.linear = nn.Linear(self.hidden_layer_size, self.output_size)
 
-        self.hidden_cell = [torch.zeros(self.num_of_layers,self.batch_size,self.hidden_layer_size),
-                            torch.zeros(self.num_of_layers,self.batch_size,self.hidden_layer_size)]
+        self.hidden_cell = [torch.randn(self.num_of_layers,self.batch_size,self.hidden_layer_size),
+                            torch.randn(self.num_of_layers,self.batch_size,self.hidden_layer_size)]
 
     def reset(self, batch_size=None):
         if batch_size is None:
             batch_size = self.batch_size
-        self.hidden_cell = [torch.zeros(self.num_of_layers,batch_size,self.hidden_layer_size),
-                            torch.zeros(self.num_of_layers,batch_size,self.hidden_layer_size)]
+        self.hidden_cell = [torch.randn(self.num_of_layers,batch_size,self.hidden_layer_size),
+                            torch.randn(self.num_of_layers,batch_size,self.hidden_layer_size)]
 
     def forward(self, input_seq):
 

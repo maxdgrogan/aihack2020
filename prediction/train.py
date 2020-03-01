@@ -98,6 +98,7 @@ class Trainer:
 
                 loss = 0.
                 for i in range(self.args.samples):
+                    #print(y_pred[:, i], y)
                     loss += self.criterion(y_pred[:, i].unsqueeze(dim=1), y)
                 loss /= self.args.samples
 
