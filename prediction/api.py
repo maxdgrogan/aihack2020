@@ -47,7 +47,7 @@ name = "drugs-{}-{}".format(args.save, time.strftime("%Y%m%d-%H%M%S"))
 args.save = './model/' + name
 args.model_path = "./model/" + name + "/" + name + ".model"
 
-NAME = "model/drugs-EXP-20200301-000533/drugs-EXP-20200301-000533.model"
+NAME = "model/drugs-EXP-20200301-061618/drugs-EXP-20200301-061618.model"
 
 if torch.cuda.is_available():
   args.gpu = 0
@@ -90,7 +90,7 @@ def get_model(train_loader=None, test_loader=None):
 
   logging.info(model.__repr__())
 
-  optimizer = torch.optim.Adam(
+  optimizer = torch.optim.SGD(
       model.parameters(),
       lr=args.learning_rate,
       weight_decay=args.weight_decay)
